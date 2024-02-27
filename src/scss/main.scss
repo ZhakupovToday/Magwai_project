@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000&display=swap');
+@import "./blocks/header";
+@import "./blocks/content";
+@import "./blocks/cards";
+
+@import './blocks/mixins.scss';
+@import './blocks/variables.scss';
+
+body {
+    background-color: #131313;
+    margin: 0;
+    max-width: 1920px;
+
+    @media only screen and (max-width: 768px ) {
+        overflow-x: hidden;
+        overscroll-behavior-x: none;
+    }
+}  
+ul {
+    list-style: none;
+}
+.btn-primary {
+    background-color: #C2AB81;
+    border: none;
+    transform: skew(165deg);
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 21px 78px; 
+    @include Montserrat(700, 12px, 18px);
+    width: 282.5px;
+    height: 60px;
+    position: relative;
+
+    @media only screen and (max-width: 768px ) {
+        width: 200px;
+        padding: 20px 36px;
+    }
+    
+    .btn-primary__text {
+        transform: skew(-165deg);
+    }
+    &:hover {
+        background-color: #c09f64;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 102%;
+        width: 6px;
+        background-color: #fff;
+        transform: skew(180deg);
+        height: 60px;
+    }
+}

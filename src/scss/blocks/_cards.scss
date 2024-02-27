@@ -1,0 +1,112 @@
+@import 'mixins';
+@import 'variables';
+
+.cards {
+    padding: 0 100px;
+
+    @media only screen and (max-width: 768px ) {
+        padding: 0 40px;
+    }
+
+    @media only screen and (max-width: 376px ) {
+        padding: 0 15px;
+    }
+}
+    .cards__title {
+        @include Montserrat(700, 42px, 51.2px);
+        margin-bottom: 53px;
+        @media only screen and (max-width: 376px ) {
+            @include Montserrat(700, 20px, 24px);
+            margin-bottom: 30px;
+        }
+    }
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+
+        @media only screen and (max-width: 768px ) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (max-width: 376px ) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+        .cards-grid__item {
+            background-color: #fff;
+            width: 320px;
+            box-shadow: 0px 3px 10px 0px #00000014;
+
+            
+        }
+            .cards-grid__img {
+                margin-top: -1px;         
+                width: 320.5px;
+                height: 185px;           
+            }
+            .cards-grid__item-wrap {
+                padding: 0 23.71px;
+            }
+                .cards-grid__heading {
+                    margin-top: 15px;
+                    @include Mulish(700, 14px, 26px);
+                    color: $subblack;
+                    letter-spacing: 1.5px;
+                }
+                .cards-grid__subheading {
+                    margin-top: 20px;
+                    @include Montserrat(450, 16px, 23px);
+                    color: $subblack;
+                    width: 252px;
+                    height: 52px;
+                    
+                }
+                .cards-grid__text {
+                    margin-top: 20px;
+                    @include Montserrat(400, 14px, 24px);
+                    color: $subblack;
+                    width: 272px;
+                    height: 144px;
+                    
+                }
+                .cards-grid__author {
+                    @include Montserrat(400, 12px, 24px);
+                    color: #666666;
+                    .cards-grid__author-strong {
+                        font-weight: 700;
+                    }
+                }
+                .cards-grid__button {
+                    margin-top: 25px;
+                    border: none;
+                    background-color: $subblack;
+                    cursor: pointer;
+                    transition: 0.4s;
+                    margin-bottom: 30px;
+                    
+                    &:hover {
+                        background-color: #353535;
+                    }
+                }
+
+                    .cards-grid__button-text {
+                        @include Mulish(500, 12px, 17px);
+                        padding: 16px 80px;
+                        max-width: 113px;
+                    }
+                
+    .cards__button {
+        margin: 0px 826px 256px 710px;
+
+        @media only screen and (max-width: 768px ) {
+            margin: 0px 237px 156px 226px;
+        }
+        @media only screen and (max-width: 376px ) {
+            margin: 0px 33px 43px 33px;
+        }
+    }
+
+
+
+    
